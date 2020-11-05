@@ -659,38 +659,6 @@
                 "default": "helvetica_n7"
             },
             {
-                "type": "range",
-                "id": "type_header_base_size",
-                "label": {
-                    "cs": "Základní velikost nadpisu",
-                    "da": "Basisstørrelse for overskrift",
-                    "de": "Titelgröße",
-                    "en": "Heading base size",
-                    "es": "Tamaño base de título",
-                    "fi": "Otsikon peruskoko",
-                    "fr": "Dimensions de base de l'en-tête",
-                    "it": "Dimensione base del titolo",
-                    "ja": "見出しの基本サイズ",
-                    "ko": "제목 기본 크기",
-                    "nb": "Grunnstørrelse for overskrift",
-                    "nl": "Afmeting kopbasis",
-                    "pl": "Podstawowy rozmiar nagłówka",
-                    "pt-BR": "Tamanho básico do título",
-                    "pt-PT": "Tamanho básico do título",
-                    "sv": "Rubrik basstorlek",
-                    "th": "ขนาดพื้นฐานของหัวเรื่อง",
-                    "tr": "Başlık temel boyutu",
-                    "vi": "Cỡ cơ sở của tiêu đề",
-                    "zh-CN": "标题基本尺寸",
-                    "zh-TW": "標題基本尺寸"
-                },
-                "default": 26,
-                "min": 20,
-                "max": 36,
-                "step": 1,
-                "unit": "px"
-            },
-            {
                 "type": "header",
                 "content": {
                     "cs": "Základní text",
@@ -745,37 +713,6 @@
                 "default": "helvetica_n4"
             },
             {
-                "type": "range",
-                "id": "type_base_size",
-                "label": {
-                    "cs": "Základní velikost",
-                    "da": "Basisstørrelse",
-                    "de": "Größe",
-                    "en": "Base size",
-                    "es": "Tamaño de base",
-                    "fi": "Peruskoko",
-                    "fr": "Dimensions de base",
-                    "it": "Dimensione base",
-                    "ja": "基本サイズ",
-                    "ko": "기본 사이즈",
-                    "nb": "Grunnstørrelse",
-                    "nl": "Basisafmeting",
-                    "pl": "Rozmiar podstawowy",
-                    "pt-BR": "Tamanho básico",
-                    "pt-PT": "Tamanho básico",
-                    "sv": "Basstorlek",
-                    "th": "ขนาดพื้นฐาน",
-                    "tr": "Temel boyutu",
-                    "vi": "Cỡ cơ sở",
-                    "zh-CN": "基本尺寸",
-                    "zh-TW": "基本尺寸"
-                },
-                "default": 15,
-                "min": 14,
-                "max": 20,
-                "step": 1,
-                "unit": "px"
-            }, {
                 "type": "header",
                 "content": "custom font"
             },
@@ -818,6 +755,74 @@
                     }
                 ],
                 "default": "alliance_no.2semibold"
+            },
+            {
+                "type": "header",
+                "content": "Font size"
+            },
+            {
+                "type": "range",
+                "id": "type_header_base_size",
+                "label": {
+                    "cs": "Základní velikost nadpisu",
+                    "da": "Basisstørrelse for overskrift",
+                    "de": "Titelgröße",
+                    "en": "Heading base size",
+                    "es": "Tamaño base de título",
+                    "fi": "Otsikon peruskoko",
+                    "fr": "Dimensions de base de l'en-tête",
+                    "it": "Dimensione base del titolo",
+                    "ja": "見出しの基本サイズ",
+                    "ko": "제목 기본 크기",
+                    "nb": "Grunnstørrelse for overskrift",
+                    "nl": "Afmeting kopbasis",
+                    "pl": "Podstawowy rozmiar nagłówka",
+                    "pt-BR": "Tamanho básico do título",
+                    "pt-PT": "Tamanho básico do título",
+                    "sv": "Rubrik basstorlek",
+                    "th": "ขนาดพื้นฐานของหัวเรื่อง",
+                    "tr": "Başlık temel boyutu",
+                    "vi": "Cỡ cơ sở của tiêu đề",
+                    "zh-CN": "标题基本尺寸",
+                    "zh-TW": "標題基本尺寸"
+                },
+                "default": 26,
+                "min": 12,
+                "max": 36,
+                "step": 1,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "type_base_size",
+                "label": {
+                    "cs": "Základní velikost",
+                    "da": "Basisstørrelse",
+                    "de": "Größe",
+                    "en": "Base size",
+                    "es": "Tamaño de base",
+                    "fi": "Peruskoko",
+                    "fr": "Dimensions de base",
+                    "it": "Dimensione base",
+                    "ja": "基本サイズ",
+                    "ko": "기본 사이즈",
+                    "nb": "Grunnstørrelse",
+                    "nl": "Basisafmeting",
+                    "pl": "Rozmiar podstawowy",
+                    "pt-BR": "Tamanho básico",
+                    "pt-PT": "Tamanho básico",
+                    "sv": "Basstorlek",
+                    "th": "ขนาดพื้นฐาน",
+                    "tr": "Temel boyutu",
+                    "vi": "Cỡ cơ sở",
+                    "zh-CN": "基本尺寸",
+                    "zh-TW": "基本尺寸"
+                },
+                "default": 15,
+                "min": 12,
+                "max": 20,
+                "step": 1,
+                "unit": "px"
             }
         ]
     }, {
