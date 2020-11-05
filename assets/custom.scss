@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'alliance_no.2regular';
+    src: url('allianceno2_-_regular.woff2') format('woff2'), url('allianceno2_-_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alliance_no.2semibold';
+    src: url('allianceno2_-_semibold.woff2') format('woff2'), url('allianceno2_-_semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.template-index {
+    [data-section-type="header-section"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .site-header {
+            background-color: var(--color-transperant);
+            .site-header__mobile-nav {
+                background-color: var(--color-transperant);
+            }
+        }
+    }
+}
