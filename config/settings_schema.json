@@ -142,6 +142,22 @@
             },
             {
                 "type": "header",
+                "content": "Menu"
+            },
+            {
+                "type": "color",
+                "id": "menu_text_color_all",
+                "label": "Menu Text color for all page",
+                "default": "#000000"
+            },
+            {
+                "type": "color",
+                "id": "menu_text_color_home",
+                "label": "Menu Text color for home page",
+                "default": "#FFE800"
+            },
+            {
+                "type": "header",
                 "content": {
                     "cs": "Tlačítka",
                     "da": "Knapper",

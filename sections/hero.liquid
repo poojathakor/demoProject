@@ -11,6 +11,20 @@
     }
   {%- endstyle -%}
 {%- endif -%}
+
+  {%- if section.settings.enable_image_shadow -%}
+    {%- assign color1 = section.settings.hero_image_shadow_color1 | color_to_rgb | remove:"rgb(" | remove:")" -%}
+    {%- assign color2 = section.settings.hero_image_shadow_color2 | color_to_rgb | remove:"rgb(" | remove:")" -%}
+    {%- assign shadow_opacity1 = section.settings.hero_image_shadow_opacity1 -%}
+    {%- assign shadow_opacity2 = section.settings.hero_image_shadow_opacity2 -%}
+    {%- assign shadow_direction = section.settings.shadow_direction -%}
+    {%- style -%}
+      [data-section-id="{{section.id}}"] .hero__overlay::before{
+        background: linear-gradient( {{shadow_direction}}deg, rgba({{color1}}, {{shadow_opacity1}}) 0%, rgba({{color1}}, {{shadow_opacity1}}) 100% );
+      }
+    {%- endstyle -%}
+  {%- endif -%}
+  
 <div data-section-id="{{ section.id }}" data-section-type="hero-section">
   {%- if section.settings.hero_layout == 'fixed_width' -%}
     <div class="page-width">
@@ -51,7 +65,7 @@
                       {%- assign min_width = slide_width | times: 100 | divided_by: max_width -%}
                       min-width: {{ min_width }}%;
                     {%- endif -%}
-                    object-position: {{ section.settings.alignment }};"
+                    object-position: {{ section.settings.alignment }}; "
              alt="{{ section.settings.image.alt | escape }}">
       {%- else -%}
         <span>
@@ -60,7 +74,9 @@
         </span>
       {%- endif -%}
       <noscript>
-        <div class="hero-fixed-width__image"{% if section.settings.image %}{% unless section.settings.image.alt == blank %} role="img" aria-label="{{ section.settings.image.alt | escape }}"{% endunless %} style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); background-position: center {{ section.settings.alignment }};"{% endif %}></div>
+        <div class="hero-fixed-width__image"{% if section.settings.image %}{% unless section.settings.image.alt == blank %} role="img" aria-label="{{ section.settings.image.alt | escape }}"{% endunless %} 
+        style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); 
+        background-position: center {{ section.settings.alignment }};"{% endif %}></div>
       </noscript>
     </div>
   {%- else -%}
@@ -77,9 +93,10 @@
          data-bgset="{% include 'bgset', image: section.settings.image %}"
          data-sizes="auto"
          data-parent-fit="cover"
-         style="background-position: {{ section.settings.alignment }};"
          data-image-loading-animation
+         style="background-position: {{ section.settings.alignment }};"
          {%- endif -%}>
+         
     {%- if section.settings.image == blank -%}
       <div class="placeholder-background">
         {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -115,7 +132,10 @@
       </div>
     </div>
     <noscript>
-      <div class="hero hero--{{ section.settings.hero_size }}{% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %} hero__overlay{% endif %}"{% if section.settings.image %}{% unless section.settings.image.alt == blank %} role="img" aria-label="{{ section.settings.image.alt | escape }}"{% endunless %} style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); background-position: center {{ section.settings.alignment }};"{% endif %}></div>
+      <div class="hero hero--{{ section.settings.hero_size }}{% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %} hero__overlay{% endif %}"{% if section.settings.image %}{% unless section.settings.image.alt == blank %} role="img" aria-label="{{ section.settings.image.alt | escape }}"{% endunless %} 
+      style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); 
+      background-position: center {{ section.settings.alignment }};"{% endif %}>
+      </div>
     </noscript>
   {%- endif -%}
   {%- if section.settings.hero_layout == 'fixed_width' -%}
@@ -552,6 +572,50 @@
           "value": "x-large"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_image_shadow",
+      "label": "Enable Image Shadow",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "hero_image_shadow_color1",
+      "label": "Hero image shadow color1",
+      "default": "#000000"
+    },{
+      "type": "range",
+      "id": "hero_image_shadow_opacity1",
+      "label": "Hero image shadow color opacity1",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "hero_image_shadow_color2",
+      "label": "Hero image shadow color2",
+      "default": "#000000"
+    },{
+      "type": "range",
+      "id": "hero_image_shadow_opacity2",
+      "label": "Hero image shadow color opacity2",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "shadow_direction",
+      "label": "shadow Direction",
+      "min": 0,
+      "max": 360,
+      "unit": "dg",
+      "step": 5,
+      "default": 180
     },
     {
       "type": "select",
