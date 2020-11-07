@@ -1433,20 +1433,16 @@ this.Shopify.theme.PredictiveSearchComponent = (function(PredictiveSearch) {
         // Set classes
         this.classes = {
             visibleVariant: config.visibleVariant ?
-                config.visibleVariant :
-                'predictive-search-wrapper--visible',
+                config.visibleVariant : 'predictive-search-wrapper--visible',
             itemSelected: config.itemSelectedClass ?
-                config.itemSelectedClass :
-                'predictive-search-item--selected',
+                config.itemSelectedClass : 'predictive-search-item--selected',
             clearButtonVisible: config.clearButtonVisibleClass ?
-                config.clearButtonVisibleClass :
-                'predictive-search__clear-button--visible'
+                config.clearButtonVisibleClass : 'predictive-search__clear-button--visible'
         };
 
         this.selectors = {
             searchResult: config.searchResult ?
-                config.searchResult :
-                '[data-search-result]'
+                config.searchResult : '[data-search-result]'
         };
 
         // Assign callbacks

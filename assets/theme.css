@@ -1820,13 +1820,13 @@ h6,
 
 .hero .mega-title,
 .hero .mega-subtitle {
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); */
 }
 
 @media only screen and (min-width: 750px) {
     .mega-title,
     .mega-subtitle {
-        text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+        /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); */
     }
 }
 
@@ -2072,7 +2072,8 @@ a[href^="tel"] {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     white-space: normal;
-    font-size: calc(((var(--font-size-base) - 2) / (var(--font-size-base))) * 1em);
+    /* font-size: calc(((var(--font-size-base) - 2) / (var(--font-size-base))) * 1em); */
+    font-size: var(--font-size-base);
 }
 
 @media only screen and (min-width: 750px) {
@@ -5394,7 +5395,7 @@ hr {
 }
 
 .site-header__cart-count span {
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--font-stack-body);
     font-size: calc(11em / 16);
     line-height: 1;
 }
@@ -8121,7 +8122,8 @@ hr {
         height: 650px;
     }
     .hero--x-large {
-        height: 775px;
+        /* height: 775px; */
+        height: calc(100vh - 20px);
     }
 }
 
