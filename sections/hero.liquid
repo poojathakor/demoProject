@@ -34,6 +34,11 @@
     background-color: {{section.settings.btn_bg_color}};
     color: {{section.settings.btn_label_color}};
   }
+  [data-section-id="{{ section.id }}"]  .hero__inner .shipping__text{
+    background-color:{{section.settings.shipping_bg_color}};
+    color:{{section.settings.shipping_text_color}};
+  }
+ 
   {% endstyle %}
   
 <div data-section-id="{{ section.id }}" data-section-type="hero-section">
@@ -148,6 +153,9 @@
             
           {%- endif -%}
         </div>
+        {%- if section.settings.enable_shipping_text and section.settings.shipping_text != blank -%}
+            <div class="shipping__text">{{section.settings.shipping_text}}</div>
+        {%- endif -%}
       </div>
     </div>
     <noscript>
