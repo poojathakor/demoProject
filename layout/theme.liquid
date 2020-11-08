@@ -76,6 +76,7 @@
 
   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
   <link rel="stylesheet" href="{{ 'custom.scss.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+  <link rel="stylesheet" href="{{ 'flickity.min.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
 
   <style>
     {{ header_font | font_face: font_display: 'swap' }}
@@ -150,6 +151,9 @@
   {%- endif -%}
 
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  {% comment %} <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+  <script src="{{ 'flickity.pkgd.min.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
 
   <script type="text/javascript">

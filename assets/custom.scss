@@ -235,3 +235,84 @@
                 }
             }
         }
+        
+        .collection-title-wrapper {
+            border: 1px solid transparent;
+        }
+        
+        .collection-title-wrapper.active {
+            border: 1px solid #000000;
+        }
+        
+        .products-slider {
+            display: block;
+        }
+        
+        .products-slider.active {
+            display: block;
+        }
+        
+        .products-slider {
+            .flickity-prev-next-button {
+                svg {
+                    display: none;
+                }
+            }
+            .flickity-prev-next-button {
+                width: 151px !important;
+                height: 147px !important;
+                background: transparent !important;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 151px;
+                    height: 147px;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            .flickity-prev-next-button.next {
+                right: 56px !important;
+                &:after {
+                    content: '';
+                    background-image: url(https://cdn.shopify.com/s/files/1/0262/4569/3524/files/Vector.svg?v=1604866645);
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            .flickity-prev-next-button.previous {
+                left: 56px !important;
+                &:after {
+                    background-image: url(https://cdn.shopify.com/s/files/1/0262/4569/3524/files/Vector.svg?v=1604866645);
+                    left: 0;
+                    transform: translateY(-50%) rotate(180deg);
+                    background-repeat: no-repeat;
+                }
+            }
+            .grid__item {
+                padding-left: 60px;
+            }
+            .medium-up--one-third {
+                width: 28.6%;
+            }
+            .flickity-button {
+                display: none;
+            }
+        }
+        
+        .desktop--show-nav {
+            @media only screen and (min-width: 749px) {
+                .flickity-button {
+                    display: block;
+                }
+            }
+        }
+        
+        .mobile--show-nav {
+            @media only screen and (max-width: 749px) {
+                .flickity-button {
+                    display: block;
+                }
+            }
+        }
