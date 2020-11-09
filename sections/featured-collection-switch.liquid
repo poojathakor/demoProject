@@ -17,10 +17,10 @@
     {%- assign collection = collections[block.settings.collection] -%}
     {%- assign product_limit = block.settings.no_of_products -%}
     {% if collection.products_count > 0 %}
-      <ul class=" products-slider carousel {% if collection.products_count > 3 %}desktop--show-nav{% endif %} {% if collection.products_count > 2 %}mobile--show-nav{% endif %} {% if block_loop_id == 1 %}active{% endif %}" data-products-slider data-products-loop-id="{{block_loop_id}}">
+      <ul class=" products-slider carousel {% if collection.products_count > 3 %}desktop--show-nav{% endif %} {% if collection.products_count > 1 %}mobile--show-nav{% endif %} {% if block_loop_id == 1 %}active{% endif %}" data-products-slider data-products-loop-id="{{block_loop_id}}">
         {% for product in collection.products limit: product_limit %}
           <li class="grid__item small--one-half medium-up--one-third grid__item--{{block.id}} carousel-cell">
-            {% include 'product-card-grid', max_height: 345, product: product, show_vendor: "false" %}
+            {% include 'product-card-grid', max_height: 345, product: product, show_vendor: false %}
           </li>
         {% else %}
           {% for i in (1..product_limit) %}
