@@ -322,6 +322,28 @@
             .flickity-button {
                 display: none;
             }
+            .grid-view-item__image-wrapper {
+                .grid-view-item__image {
+                    width: 100%;
+                    height: 16.67vw;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: contain;
+                }
+            }
+            .grid-view-item__link {
+                position: relative;
+            }
+            .title-price--wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+            }
         }
         
         .desktop--show-nav {

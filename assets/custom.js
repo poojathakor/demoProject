@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
             contain: true,
             groupCells: 1,
             pageDots: false,
-            wrapAround: false
+            wrapAround: false,
+            groupCells: true
         });
     });
     // Collection switcher
