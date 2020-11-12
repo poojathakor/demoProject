@@ -433,6 +433,15 @@ a {
     background-color: transparent;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
 b,
 strong {
     font-weight: var(--font-weight-body--bolder);
@@ -8959,10 +8968,11 @@ hr {
     opacity: 0.8;
 }
 
-.product-card:hover .product-card__title,
+
+/* .product-card:hover .product-card__title,
 .product-card:focus-within .product-card__title {
     border-bottom-color: var(--color-text);
-}
+} */
 
 .product-card__image-with-placeholder-wrapper {
     position: relative;

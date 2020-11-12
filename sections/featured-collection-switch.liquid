@@ -1,16 +1,20 @@
 <div class="">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
+      <h2>{{ section.settings.title }}</h2>
     </div>
   {% endif %}
 
-  {% for block in section.blocks %}
-    {%- assign collection = collections[block.settings.collection] -%}
-    <a href="#" class="collection-title-wrapper  {% if forloop.index == 1 %}active{% endif %}" data-collection-switch data-collection-loop-id="{{forloop.index}}">
-      {{collection.title}}
-    </a>
-  {% endfor %}
+  {% if section.blocks.size > 0 %}
+    <div class="collection-title-wrap">
+      {% for block in section.blocks %}
+        {%- assign collection = collections[block.settings.collection] -%}
+        <a href="#" class="collection-title-wrapper  {% if forloop.index == 1 %}active{% endif %}" data-collection-switch data-collection-loop-id="{{forloop.index}}">
+          {{collection.title}}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
 
   {% for block in section.blocks %}
     {%- assign block_loop_id = forloop.index  -%}
@@ -53,12 +57,10 @@
   {% endfor %}
 </div>
 
-
-
 {% schema %}
 {
   "name":  "Collection switch",
-  "class": "index-section",
+  "class": "index-section featured-collection-switch",
   "max_blocks": 5,
   "settings": [
     {
